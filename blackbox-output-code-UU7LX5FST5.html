@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kicks & Style | Premium Sneakers</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #ff4500; /* Orange accent */
+            --dark-bg: #1a1a1a;
+            --light-text: #f4f4f4;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e03e00;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: var(--dark-bg);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .product-price {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebc57;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">KICKS & STYLE</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Step Up Your Game</h1>
+        <p>Premium sneakers delivered to your doorstep. Order directly via WhatsApp for the best deals.</p>
+        <a href="#shop" class="btn">Shop Now</a>
+    </section>
+
+    <!-- Product Section -->
+    <section class="products" id="shop">
+        <h2 class="section-title">Latest Drops</h2>
+        
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <!-- Placeholder image used. Replace src with your own image URL -->
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Red Nike Sneaker" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Nike Air Red</h3>
+                    <span class="product-price">$120.00</span>
+                    <a href="https://wa.me/9178635421878?text=Hi, I am interested in buying the Nike Air Red" class="whatsapp-btn" target="_blank">
+                        Buy on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Green Jordan" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Jordan High Green</h3>
+                    <span class="product-price">$150.00</span>
+                    <a href="https://wa.me/9178635421878?text=Hi, I am interested in buying the Jordan High Green" class="whatsapp-btn" target="_blank">
+                        Buy on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Running Shoes" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Urban Runners</h3>
+                    <span class="product-price">$95.00</span>
+                    <a href="https://wa.me/9178635421878?text=Hi, I am interested in buying the Urban Runners" class="whatsapp-btn" target="_blank">
+                        Buy on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="White Sneakers" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Classic White</h3>
+                    <span class="product-price">$85.00</span>
+                    <a href="https://wa.me/9178635421878?text=Hi, I am interested in buying the Classic White" class="whatsapp-btn" target="_blank">
+                        Buy on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>KICKS & STYLE</h3>
+        <p>Order via WhatsApp: <strong>+91 78635421878</strong></p>
+        <p>&copy; 2023 Kicks & Style. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
